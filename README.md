@@ -1,4 +1,4 @@
-# React GraphQL Boilerplate (TypeScript)
+# React MonogDB GraphQL Boilerplate (TypeScript)
 *  [Built With](#built-with)
 *  [Getting Started](#getting-started)
 
