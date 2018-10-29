@@ -2,8 +2,6 @@
 import React from 'react';
 
 // Imports: Components
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
 
 // Container: Home
 const Home = () => (

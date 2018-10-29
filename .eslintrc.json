@@ -1,11 +1,13 @@
 {
     "extends": "airbnb",
     "plugins": [
-        "react",
+        "import",
         "jsx-a11y",
-        "import"
+        "react",
+        "typescript"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "typescript/rule-name": "error"
     }
 }

@@ -6,7 +6,7 @@ require('@babel/register');
 // Webpack Configuration
 const config = {
   // Entry
-  entry: './client/src/index.jsx',
+  entry: './client/src/index.tsx',
   // Output
   output: {
     path: path.resolve(__dirname, './client/dist'),
@@ -15,11 +15,18 @@ const config = {
   // Loaders
   module: {
     rules: [
-      // JavaScript/JSX Files
+      // TypeScript/TSX Files
       {
-        test: /\.jsx$/,
+        test: /\.tsx$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: 'awesome-typescript-loader',
+      },
+      // JavaScript Files
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: 'source-map-loader',
       },
       // CSS Files
       {
@@ -39,6 +46,11 @@ const config = {
       template: './client/src/index.html',
     }),
   ],
+  // What Does This Do (COMEBACK)
+  // externals: {
+  //   react: 'React',
+  //   react-dom: 'ReactDOM',
+  // },
   // Reload On File Change
   watch: true,
   // Development Tools (Map Errors To Source File)
